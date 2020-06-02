@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid19 Live Tracker</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>Covid19 Tracker</h1>
+        </header>
+        <h2 id='tabTitle'></h2>
+        <section id="main">
+            <div id="top5">
+            </div>
+            <div id="home">
+                <div id='searchBar'>
+                    <input type='search' id='countrySearch' placeholder='Search Country'>
+                    <span onclick="searchCountry()" class='fa fa-search'></span>
+                </div>
+                <table id="homeSummary"> 
+                </table>
+            </div>
+            <div id="news">
+               <!--<iframe id="newsFrame" src="" height="100%" width="100%"></iframe>-->
+              <h3>WHO, Gavi and UNICEF warn that disruption to routine vaccination leaves at least 80 million children at risk</h3>  
+
+<div>22 May 2020 </div> 
+
+<p> COVID 19 is disrupting life-saving immunization services around the world, putting millions of children – in rich and poor countries alike – at risk of diseases like diphtheria, measles and polio. </p> 
+
+
+<p>Provision of routine immunization services is substantially hindered in at least 68 countries and is likely to affect approximately 80 million children under the age of 1 living in these countries. </p>
+
+
+<p>Since March 2020, routine childhood immunization services have been disrupted on a global scale that may be unprecedented since the inception of expanded programs on immunization (EPI) in the 1970s.  </p>
+
+
+<p>The reasons for disrupted services vary. Some parents are reluctant to leave home because of restrictions on movement, lack of information or because they fear infection with the COVID-19 virus. And many health workers are unavailable because of restrictions on travel, or redeployment to COVID response duties, as well as a lack of protective equipment. Transport delays of vaccines are also exacerbating the situation. </p>
+
+
+<p>Despite the challenges, several countries are making special efforts to continue immunization. Uganda is ensuring that immunization services continue along with other essential health services, even funding transportation to ensure outreach activities. And in Lao PDR, despite a national lockdown imposed in March, routine immunization in fixed sites continued with physical distancing measures in place. </p>
+            </div>
+            
+            
+            <div id="advice">
+            <br />
+                <strong>Stay aware of the latest information on the COVID-19 outbreak, available on the WHO website and through your national and local public health authority. Most countries around the world have seen cases of COVID-19 and many are experiencing outbreaks. Authorities in China and some other countries have succeeded in slowing their outbreaks. However, the situation is unpredictable so check regularly for the latest news.</strong>
+
+<h3>You can reduce your chances of being infected or spreading COVID-19 by taking some simple precautions:</h3>
+<ul>
+<li>Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water. Why? Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.</li>
+
+<li>Maintain at least 1 metre (3 feet) distance between yourself and others. Why? When someone coughs, sneezes, or speaks they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person has the disease.</li>
+
+<li>Avoid going to crowded places. Why? Where people come together in crowds, you are more likely to come into close contact with someone that has COIVD-19 and it is more difficult to maintain physical distance of 1 metre (3 feet).</li>
+
+<li>Avoid touching eyes, nose and mouth. Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and infect you.</li>
+
+<li>Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately and wash your hands. Why? Droplets spread virus. By following good respiratory hygiene, you protect the people around you from viruses such as cold, flu and COVID-19.</li>
+
+<li>Stay home and self-isolate even with minor symptoms such as cough, headache, mild fever, until you recover. Have someone bring you supplies. If you need to leave your house, wear a mask to avoid infecting others. Why? Avoiding contact with others will protect them from possible COVID-19 and other viruses.</li>
+
+<li>If you have a fever, cough and difficulty breathing, seek medical attention, but call by telephone in advance if possible and follow the directions of your local health authority. Why? National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also protect you and help prevent spread of viruses and other infections.</li>
+
+<li>Keep up to date on the latest information from trusted sources, such as WHO or your local and national health authorities. Why? Local and national authorities are best placed to advise on what people in your area should be doing to protect themselves.</li>
+</ul>
+
+<h3>Advice on the safe use of alcohol-based hand sanitizers</h3>
+
+<ul>
+<li>To protect yourself and others against COVID-19, clean your hands frequently and thoroughly. Use alcohol-based hand sanitizer or wash your hands with soap and water. If you use an alcohol-based hand sanitizer, make sure you use and store it carefully.</li>
+
+<li>Keep alcohol-based hand sanitizers out of children’s reach. Teach them how to apply the sanitizer and monitor its use.</li>
+
+<li>Apply a coin-sized amount on your hands. There is no need to use a large amount of the product.</li>
+
+<li>Avoid touching your eyes, mouth and nose immediately after using an alcohol-based hand sanitizer, as it can cause irritation.</li>
+
+<li>Hand sanitizers recommended to protect against COVID-19 are alcohol-based and therefore can be flammable. Do not use before handling fire or cooking.</li>
+
+<li>Under no circumstance, drink or let children swallow an alcohol-based hand sanitizer. It can be poisonous. </li>
+<br /><br />
+<strong>Remember that washing your hands with soap and water is also effective against COVID-19.</strong>
+
+
+            </div>
+            <div id="loading"><div class='spin'></div></div>
+            <div id="retry">Failed to retrieve data.<button onclick="initialize()">RETRY</button></div>
+        </section>
+        <aside>
+            <div class="navB top5" onclick="switchTab('top5')">
+                <span class="fa fa-arrow-up">5 </span>
+            </div>
+            <div class="navB home" onclick="switchTab('home')">
+                <span class="fa fa-home"></span>
+            </div>
+            <div class="navB news" onclick="switchTab('news')">
+                <span class="fa fa-globe"></span>
+            </div>
+            <div class="navB advice" onclick="switchTab('advice')">
+                <span class="fa fa-info"></span>
+            </div>
+        </aside>
+       <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOI2SHsx2yGrDAC9o-SDD3PvdZC_t9yYE&callBack=drawMap()">-->
+        </script>
+        <script>
+            initialize();
+        </script>
+    </body>
+</html>
